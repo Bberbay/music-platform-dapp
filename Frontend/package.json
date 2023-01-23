@@ -10,14 +10,15 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "@pinata/sdk": "^2.1.0",
     "@types/regenerator-runtime": "^0.13.1",
-    "axios": "^1.2.1",
+    "axios": "^0.27.2",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "bootstrap": "^5.2.3",
-    "vue": "^3.2.45",
-    "vue-router": "^4.1.6",
-    "vuex": "^4.1.0",
-    "web3": "^1.8.1"
+    "bootstrap": "^5.2.0",
+    "vue": "^2.5.11",
+    "vue-router": "^2.8.1",
+    "vuex": "^3.6.2",
+    "web3": "^1.8.0"
   },
   "browserslist": [
     "> 1%",
@@ -25,18 +26,18 @@
     "not ie <= 8"
   ],
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/plugin-transform-runtime": "^7.18.10",
     "babel-core": "^6.26.0",
-    "babel-loader": "^9.1.0",
+    "babel-loader": "^7.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-3": "^6.24.1",
-    "cross-env": "^7.0.3",
+    "cross-env": "^5.2.1",
     "css-loader": "^0.28.7",
-    "file-loader": "^6.2.0",
-    "vue-loader": "^17.0.1",
-    "vue-template-compiler": "^2.7.14",
-    "webpack": "^5.75.0",
-    "webpack-dev-server": "^4.11.1"
+    "file-loader": "^1.1.4",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.4.4",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
   }
 }

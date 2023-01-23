@@ -18,38 +18,15 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
   data () {
     return {
       TrackList : 
-        { TrackName : "Ornek Parca 1" ,
-        Ipfs : "Ornek IPFS 1",
-        OwnerAddress: "Örnek Sahip 1"}
+        { ParcaAdi : "Ornek Parca 1" ,
+        ParcaSahibi : "Ornek Sahip 1"}
       
     }
-  },
-  created() {
-    axios.get("http://localhost:5000/music")
-    .then(response => {
-                var array  = response;
-                console.log(array)
-                var arrayLength = Object.keys(array).length
-                console.log(arrayLength)
-                for(var i =0;i<=arrayLength; i++) {
-                    //this.username = array.data[i].username;
-                    //this.password = array.data[i].password;
-                    // this.email = array.data[i].email;
-                    this.TrackList.TrackName.push(array.data[i].TrackName)
-                    this.TrackList.Ipfs.push(array.data[i].Ipfs)
-                    this.TrackList.OwnerAddress.push(array.data[i].OwnerAddress)
-                }
-            })
-            .catch(err => console.log(err))
-
-
   }
-
 }
 </script>
 
@@ -62,7 +39,7 @@ export default {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  margin:5;
+  margin:0;
   grid-template-columns: 1fr 1fr 1fr;
   border-radius: 25px;
 }

@@ -3,9 +3,9 @@ import {
     GetHome,
     RegisterUsers,
     LoginUsers, 
-    Auth,
     DeleteUserAccount, 
-    UpdatePassword 
+    UpdatePassword,
+//    UploadTrack
 }from '../controller/users.js';
 
 const router = express.Router();
@@ -16,10 +16,10 @@ router.post('/register', RegisterUsers);
 
 router.post('/login', LoginUsers);
 
-router.post('/auth', Auth);
-
 router.post('/delete', DeleteUserAccount);
 
 router.post('/updatePassword', UpdatePassword);
+
+// router.post('/upload',UploadTrack);
 
 export default router;

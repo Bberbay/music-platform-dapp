@@ -43,19 +43,6 @@
       </li>
       </router-link>
 
-      <router-link to="/metamask" >
-      <li class="nav-item">
-        <a class="nav-link" >Metamask</a>
-      </li>
-      </router-link>
-
-      <router-link to="/test" >
-      <li class="nav-item">
-        <a class="nav-link" >Vuelidate Test</a>
-      </li>
-      </router-link>
-
-
     </ul>
   </div>
 </nav>
