@@ -2,15 +2,15 @@
     <div>
 
 <div class="login-box">
-<h2>Login</h2>
+<h2>Kayıt Ol</h2>
 <form @submit.prevent="onSubmit">
 <div class="user-box">
 <input type="text" name="username" required="text" v-model="user.username"  >
-<label>Username</label>
+<label>Kullanıcı Adı</label>
 </div>
 <div class="user-box">
 <input type="password" name="password" required="text" v-model="user.password" >
-<label>Password</label>
+<label>Şifre</label>
 </div>
 <div class="user-box">
 <input type="email" name="email" required="text" v-model="user.email" >
@@ -20,12 +20,39 @@
 <span></span>
 <span></span>
 <span></span>
-<span></span>Submit</button>
+<span></span>Gönder</button>
 </form>
 </div>
 
 
+    <!--
+      <form @submit.prevent="onSubmit">
+        <div class="container bg-dark">
+          <h1>Kayıt Ol</h1>
+    <p>Lütfen kayıt olmak için formu doldurunuz.</p>
+    <hr>
+    <label for="username"><b>Kullanıcı Adı</b></label>
+    <input v-model="user.username" type="text" placeholder="Enter Username" required>
 
+    <label for="email"><b>Email</b></label>
+    <input v-model="user.email" type="text" placeholder="Enter Email" required>
+
+    <label for="psw"><b>Şifre</b></label>
+    <input v-model="user.password"  type="password" placeholder="Enter Password" required>
+
+    <label for="psw-repeat"><b>Şifreyi Tekrarla</b></label>
+    <input v-model="user.confirm_password" type="password" placeholder="Repeat Password" required>
+    <hr>
+    <p><a href="#">Terms & Privacy</a></p>
+
+    <button type="submit" class="registerbtn">Gönder</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Hesabınız var mı? <a href="/login">Giriş Yapın</a></p>
+  </div>
+</form>
+-->
     </div>
 </template>
 
@@ -36,6 +63,27 @@
  // import {useVuelidate} from '@vuelidate/core'
 
   export default {
+    /*setup () {
+      const post = ref([])
+      const API_URL = "http://localhost:5000/posts"
+      onMounted (() => {
+        getPost()
+      })
+      async function getPost() {
+        try {
+        const response = await fetch(API_URL) // get isteği
+        const json = await response.json()
+        post.value = json  
+        } catch (error) {
+          console.log(error)
+        }
+      }
+      return {
+        post
+      }
+    }
+    */
+
    data () {
       return {
         user : {

@@ -1,7 +1,6 @@
 <template>
 <div class="container">
     <h2> Haftanın Trendleri</h2>
-   
     <appTracks v-for="track in 5" :key="track.index"> </appTracks>
 </div>
 </template>

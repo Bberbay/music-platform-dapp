@@ -6,21 +6,12 @@ import {
     AddMusicToPlaylist,
     DeleteMusicToPlaylist,
     AddMusicToAlbum,
-    DeleteMusicToAlbum,
-    Track_Check,
-    Playlist_Check,
-    Album_Check
+    DeleteMusicToAlbum 
 } from '../controller/musics.js';
 
 const router = express.Router();
 
 router.post('/addMusic', NewMusic);
-
-router.post('/checkMusic', Track_Check);
-
-router.post('/checkPlaylist', Playlist_Check);
-
-router.post('/checkAlbum', Album_Check);
 
 router.post('/newPlaylist', NewPlaylists);
 

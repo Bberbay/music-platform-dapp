@@ -2,24 +2,40 @@
      <div>
 
       <div class="login-box">
-  <h2>Login</h2>
+  <h2>Giriş Yap</h2>
   <form @submit.prevent="onSubmit">
     <div class="user-box">
       <input type="text" name="username" required="text" v-model="username"  >
-      <label>Username</label>
+      <label>Kullanıcı Adı</label>
     </div>
     <div class="user-box">
       <input type="password" name="password" required="text" v-model="password" >
-      <label>Password</label>
+      <label>Şifre</label>
     </div>
     <button type="submit"> 
       <span></span>
       <span></span>
       <span></span>
-      <span></span>Submit</button>
+      <span></span>Gönder</button>
   </form>
 </div>
 
+
+  <!--      <form @submit.prevent="onSubmit">
+  <div class="container">
+    <h1>Giriş Yap</h1>
+    <hr>
+    <label for="username"><b>Kullanıcı Adı</b></label>
+    <input type="text" placeholder="Enter Username" name="username" id="username" v-model="username" required>
+    <label for="psw"><b>Şifre</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" v-model="password" required>
+    <button type="submit" class="loginbtn">Giriş Yap</button>
+  </div>
+  
+  <div class="container signin">
+    <p> <a href="/login">Şifremi unuttum</a></p>
+  </div>
+</form>-->
     </div>
 </template>
 <script>
@@ -48,6 +64,64 @@
 
 
 <style>
+/*       body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}-
+
+.loginbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.loginbtn:hover {
+  opacity: 1;
+}
+
+a {
+  color: dodgerblue;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+*/
+
 .login-box {
   position: absolute;
   top: 50%;

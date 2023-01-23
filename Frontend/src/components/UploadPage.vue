@@ -3,19 +3,20 @@
       <div v-if="connected">
       <div class="login-box">
   <h2>Upload Page   </h2>
-  <form form action method="post">
+  <form @submit.prevent="onSubmit">
     <div class="user-box">
-      <input type="text" name="username" required="text" v-model="music.TrackName"  >
+      <input type="text" name="trackname" required="text" v-model="music.TrackName"  >
       <label>Şarkı Adı </label>
     </div>
     <label>Kategori seçiniz</label>
     <div class="user-box">
       
-   <li class="list"><a href="#">Kategoriler </a> 
+   <li class="list">Kategoriler
       <ul class="items">
-         <li><a href="#"> Item 1-1</a></li>
-         <li><a href="#"> Item 1-2</a></li>
-         <li><a href="#"> Item 1-3</a></li>
+         <li>Hip-Hop</li>
+         <li>Pop</li>
+         <li>Chill</li>
+         <li>Rock</li>
       </ul>
    </li>
     </div>
@@ -36,8 +37,9 @@
 </template>
 
 <script>
+import axios from 'axios';
+
     export default {
-      
       name : 'App',
       data() {
         return {
@@ -61,10 +63,17 @@
           }
           console.log(this.connected)
         },
-        
-      }
-    }
+        async onSubmit(){
+            const response = await axios.post("http://localhost:5000/upload", {
+              TrackName : this.TrackName,
+            });
+            console.log(response);
+            console.log("Parça başarıyla yüklendi." ); 
 
+          }
+        }
+        }
+    
 </script>
 
 <style scoped>
